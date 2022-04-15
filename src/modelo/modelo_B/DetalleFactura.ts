@@ -5,7 +5,7 @@ export class DetalleFactura{
      cantidad: number;
      subTotal: number;
      articulo: Articulo;
-
+     //asdasd
 
   constructor(
     cantidad: number,
