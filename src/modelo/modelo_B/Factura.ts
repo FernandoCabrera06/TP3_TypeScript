@@ -9,31 +9,29 @@ export class Factura {
      totalItems: number;
      totalFinal: number;
      fecha: Date;
-     cliente: Cliente;
-     detallesFactura: Array<DetalleFactura> = new Array<DetalleFactura>();
+     detallesFactura: Array<DetalleFactura>;
 
   constructor(
     letra: string, 
     numero: number, 
     recargo: number, 
-    tipoPago: string, 
-    totalItems: number, 
-    totalFinal: number, 
-    fecha: Date, 
-    cliente: Cliente, 
-    detallesFactura: Array<DetalleFactura> 
+    tipoPago: string,
+    fecha: Date,
+    detallesFactura: Array<DetalleFactura>
 ) {
     this.letra = letra
     this.numero = numero
     this.recargo = recargo
     this.tipoPago = tipoPago
-    this.totalItems = totalItems
-    this.totalFinal = totalFinal
+    this.totalItems = 0;
+    this.totalFinal = 0;
     this.fecha = fecha
-    this.cliente = cliente
-    this.detallesFactura = detallesFactura
+    this.detallesFactura=detallesFactura
   }
 
+  //relaciones
+  cliente: Cliente | undefined;
+  
    
 
     public setTipoPago(tipoPago: string) {

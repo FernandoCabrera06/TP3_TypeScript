@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cliente = void 0;
 class Cliente {
-    constructor(numero, razonSocial, cuit, facturas) {
-        this.facturas = new Array();
+    constructor(numero, razonSocial, cuit) {
+        //relación
+        this.facturas = [];
         this.numero = numero;
         this.razonSocial = razonSocial;
         this.cuit = cuit;
-        this.facturas = facturas;
     }
     totalFacturadoXTipoPago(tipoPago) {
         let total = 0;

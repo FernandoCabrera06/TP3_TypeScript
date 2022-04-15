@@ -4,21 +4,22 @@ export class Cliente{
     numero: number;
     razonSocial: string;
     cuit: number;
-    facturas: Array<Factura> = new Array<Factura>();
+    
 
 
   constructor(
     numero: number, 
     razonSocial: string, 
-    cuit: number, 
-    facturas: Array<Factura> 
+    cuit: number
 ) {
     this.numero = numero
     this.razonSocial = razonSocial
     this.cuit = cuit
-    this.facturas = facturas
   }
    
+  //relación
+  facturas: Array<Factura> =[];
+
 
     public totalFacturadoXTipoPago(tipoPago:string){
         let total:number = 0;

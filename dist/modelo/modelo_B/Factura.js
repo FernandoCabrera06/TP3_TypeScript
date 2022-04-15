@@ -2,16 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Factura = void 0;
 class Factura {
-    constructor(letra, numero, recargo, tipoPago, totalItems, totalFinal, fecha, cliente, detallesFactura) {
-        this.detallesFactura = new Array();
+    constructor(letra, numero, recargo, tipoPago, fecha, detallesFactura) {
         this.letra = letra;
         this.numero = numero;
         this.recargo = recargo;
         this.tipoPago = tipoPago;
-        this.totalItems = totalItems;
-        this.totalFinal = totalFinal;
+        this.totalItems = 0;
+        this.totalFinal = 0;
         this.fecha = fecha;
-        this.cliente = cliente;
         this.detallesFactura = detallesFactura;
     }
     setTipoPago(tipoPago) {

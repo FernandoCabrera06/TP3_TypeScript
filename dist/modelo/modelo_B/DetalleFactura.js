@@ -2,14 +2,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DetalleFactura = void 0;
 class DetalleFactura {
-    constructor(cantidad, subTotal, factura, articulo) {
+    constructor(cantidad, articulo) {
         this.cantidad = cantidad;
-        this.subTotal = subTotal;
-        this.factura = factura;
+        this.subTotal = 0;
         this.articulo = articulo;
     }
     calcularSubTotal() {
-        this.subTotal = (this.cantidad * this.articulo.precio);
+        if (this.articulo) {
+            this.subTotal = (this.cantidad * this.articulo.precio);
+        }
     }
 }
 exports.DetalleFactura = DetalleFactura;
