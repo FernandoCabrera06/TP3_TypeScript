@@ -13,8 +13,8 @@ class TestB {
         let articulo3 = new Articulo_1.Articulo(96, "Salsa", 80, "kg");
         let articulo4 = new Articulo_1.Articulo(54, "Condimento", 100, "kg");
         let articulo5 = new Articulo_1.Articulo(38, "Jamón", 200, "kg");
-        let detalleFactura1 = new DetalleFactura_1.DetalleFactura(3, articulo1);
-        let detalleFactura2 = new DetalleFactura_1.DetalleFactura(2, articulo3);
+        let detalleFactura1 = new DetalleFactura_1.DetalleFactura(3, articulo1); //3*150=450
+        let detalleFactura2 = new DetalleFactura_1.DetalleFactura(2, articulo3); //2*80=240
         let arrayDetalles1 = [];
         arrayDetalles1.push(detalleFactura1);
         arrayDetalles1.push(detalleFactura2);
@@ -30,10 +30,10 @@ class TestB {
         cliente1.facturas.push(factura1);
         cliente1.facturas.push(factura2);
         cliente1.facturas.push(factura3);
-        console.log(`El subtotal del dellate 1 es: ${cliente1.facturas[1].detallesFactura[1].calcularSubTotal()}`);
-        console.log(`El total de items es: ${cliente1.facturas[0].calcularTotalItems()}`);
-        console.log(`El total final es: ${cliente1.facturas[0].calcularTotalFinal()}`);
-        console.log(`El total facturado por tipo de pago es: ${cliente1.totalFacturadoXTipoPago("TC")}`);
+        //     console.log(`El subtotal del dellate 1 es: ${cliente1.facturas[1].detallesFactura[1].calcularSubTotal()}`);
+        //    console.log(`El total de items es: ${cliente1.facturas[0].calcularTotalItems()}`);
+        //    console.log(`El total final es: ${cliente1.facturas[0].calcularTotalFinal()}`);
+        console.log(`El total facturado por tipo de pago es: ${cliente1.totalFacturadoXTipoPago("TR")}`);
     }
 }
 exports.TestB = TestB;

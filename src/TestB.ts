@@ -17,9 +17,9 @@ export class TestB {
         let articulo4 = new Articulo(54,"Condimento",100,"kg");
         let articulo5 = new Articulo(38,"Jamón",200,"kg");
 
-        let detalleFactura1 = new DetalleFactura(3,articulo1);
+        let detalleFactura1 = new DetalleFactura(3,articulo1); //3*150=450
 
-        let detalleFactura2 = new DetalleFactura(2,articulo3);
+        let detalleFactura2 = new DetalleFactura(2,articulo3); //2*80=240
 
 let arrayDetalles1:Array<DetalleFactura> =[];
 arrayDetalles1.push(detalleFactura1);
@@ -41,9 +41,9 @@ arrayDetalles2.push(detalleFactura2);
         cliente1.facturas.push(factura3);
 
 
-        console.log(`El subtotal del dellate 1 es: ${cliente1.facturas[1].detallesFactura[1].calcularSubTotal()}`);
-        console.log(`El total de items es: ${cliente1.facturas[0].calcularTotalItems()}`);
-        console.log(`El total final es: ${cliente1.facturas[0].calcularTotalFinal()}`);
-        console.log(`El total facturado por tipo de pago es: ${cliente1.totalFacturadoXTipoPago("TC")}`);
+    //     console.log(`El subtotal del dellate 1 es: ${cliente1.facturas[1].detallesFactura[1].calcularSubTotal()}`);
+    //    console.log(`El total de items es: ${cliente1.facturas[0].calcularTotalItems()}`);
+    //    console.log(`El total final es: ${cliente1.facturas[0].calcularTotalFinal()}`);
+        console.log(`El total facturado por tipo de pago es: ${cliente1.totalFacturadoXTipoPago("TR")}`);
     }
 }

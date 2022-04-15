@@ -13,12 +13,14 @@ class Cliente {
         let total = 0;
         for (let factura of this.facturas) {
             if (factura.tipoPago == tipoPago) {
+                factura.calcularTotalFinal();
                 total += factura.totalFinal;
             }
             else if (factura.tipoPago == null ||
                 factura.tipoPago == "" ||
                 tipoPago == null ||
                 tipoPago == "") {
+                factura.calcularTotalItems();
                 total += factura.totalItems;
             }
         }

@@ -27,6 +27,7 @@ class Factura {
     calcularTotalItems() {
         let total = 0;
         for (let i = 0; i < this.detallesFactura.length; i++) {
+            this.detallesFactura[i].calcularSubTotal();
             total += this.detallesFactura[i].subTotal;
         }
         this.totalItems = total;
